@@ -33,6 +33,7 @@ import org.sonar.plugins.web.checks.dependencies.IllegalTagLibsCheck;
 import org.sonar.plugins.web.checks.dependencies.LibraryDependencyCheck;
 import org.sonar.plugins.web.checks.header.HeaderCheck;
 import org.sonar.plugins.web.checks.header.MultiplePageDirectivesCheck;
+import org.sonar.plugins.web.checks.rgaa3.Rgaa301011Check;
 import org.sonar.plugins.web.checks.scripting.JspScriptletCheck;
 import org.sonar.plugins.web.checks.scripting.LongJavaScriptCheck;
 import org.sonar.plugins.web.checks.scripting.UnifiedExpressionCheck;
@@ -131,6 +132,8 @@ public final class CheckClasses {
     PageWithoutFaviconCheck.class,
     ElementWithGivenIdPresentCheck.class,
     PasswordAutocompleteCheck.class,
+    //RGAA3
+    Rgaa301011Check.class,
   };
 
   private CheckClasses() {
