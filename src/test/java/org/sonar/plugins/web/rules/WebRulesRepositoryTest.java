@@ -35,7 +35,7 @@ public class WebRulesRepositoryTest extends AbstractWebPluginTester {
     assertThat(repository.getName()).isEqualTo("SonarQube");
 
     List<Rule> rules = repository.createRules();
-    assertThat(rules.size()).isEqualTo(56);
+    assertThat(rules.size()).isEqualTo(57);
     assertThat(rules).onProperty("name").containsOnly((Object) null);
     assertThat(rules).onProperty("description").containsOnly((Object) null);
   }

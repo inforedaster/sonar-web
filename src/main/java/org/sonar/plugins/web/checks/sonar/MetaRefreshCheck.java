@@ -33,6 +33,8 @@ import org.sonar.plugins.web.node.TagNode;
 })
 public class MetaRefreshCheck extends AbstractPageCheck {
 
+  private static final String SEPERATOR =";";
+
   @Override
   public void startElement(TagNode node) {
     if (isMetaRefreshTag(node)) {
@@ -42,10 +44,26 @@ public class MetaRefreshCheck extends AbstractPageCheck {
 
   private static boolean isMetaRefreshTag(TagNode node) {
     String httpEquiv = node.getAttribute("HTTP-EQUIV");
+    String content = node.getAttribute("content");
 
-    return "META".equalsIgnoreCase(node.getNodeName()) &&
-      httpEquiv != null &&
-      "REFRESH".equalsIgnoreCase(httpEquiv);
+    return "META".equalsIgnoreCase(node.getNodeName()) && httpEquiv != null && "REFRESH".equalsIgnoreCase(httpEquiv) && isTall(content)  ;
+
+  }
+
+  private static boolean isTall(String content){
+
+    if(content!=null){
+      String[] tabContent =content.split(SEPERATOR);
+
+      if (tabContent.length==1) {
+        return false;
+      } else if(tabContent.length>1 && !tabContent[0].equals("0") ) {
+        return true ;
+      }
+
+      return false;
+    }
+    return false;
   }
 
 }
