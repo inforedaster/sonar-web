@@ -17,6 +17,8 @@
  */
 package org.sonar.plugins.web.rules;
 
+import org.sonar.plugins.web.checks.rgaa3.Rgaa311061Check;
+
 import org.sonar.plugins.web.checks.rgaa3.Rgaa308031Check;
 import org.sonar.plugins.web.checks.attributes.IllegalAttributeCheck;
 import org.sonar.plugins.web.checks.attributes.RequiredAttributeCheck;
@@ -136,6 +138,7 @@ public final class CheckClasses {
     //RGAA3
     Rgaa301011Check.class,
     Rgaa308031Check.class,
+    Rgaa311061Check.class,
   };
 
   private CheckClasses() {
