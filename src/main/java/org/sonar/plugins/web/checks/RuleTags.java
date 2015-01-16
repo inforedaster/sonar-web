@@ -39,6 +39,8 @@ public @interface RuleTags {
   public static final String SECURITY = "security";
   public static final String UNUSED = "unused";
   public static final String USER_EXPERIENCE = "user-experience";
+  public static final String RGAA3 = "Rgaa3";
+  
 
   String[] value();
 

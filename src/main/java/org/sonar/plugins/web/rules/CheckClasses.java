@@ -17,6 +17,7 @@
  */
 package org.sonar.plugins.web.rules;
 
+import org.sonar.plugins.web.checks.rgaa3.Rgaa308031Check;
 import org.sonar.plugins.web.checks.attributes.IllegalAttributeCheck;
 import org.sonar.plugins.web.checks.attributes.RequiredAttributeCheck;
 import org.sonar.plugins.web.checks.coding.ComplexityCheck;
@@ -134,6 +135,7 @@ public final class CheckClasses {
     PasswordAutocompleteCheck.class,
     //RGAA3
     Rgaa301011Check.class,
+    Rgaa308031Check.class,
   };
 
   private CheckClasses() {
